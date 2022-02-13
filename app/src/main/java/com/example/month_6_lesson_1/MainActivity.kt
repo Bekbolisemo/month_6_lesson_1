@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             } else {
-                Intent(this@MainActivity, SecondActivity::class.java).apply {
+                Intent(this, SecondActivity::class.java).apply {
                     putExtra(KEY_SECOND_ACTIVITY_PUSH, binding.enterText.text.toString())
                     registerForActivityResult.launch(this)
                 }
