@@ -3,4 +3,8 @@
     <string name="enter">Enter</string>
     <string name="enter_text">Введите текст</string>
     <string name="text_empty">text empty</string>
+    <string name="image_null">картинка не выбрана</string>
+    <string name="download">загрузить</string>
+    <string name="image_inquiry">image/*</string>
+    <string name="send">отправить</string>
 </resources>

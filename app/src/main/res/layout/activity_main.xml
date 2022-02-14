@@ -7,6 +7,18 @@
     android:layout_marginHorizontal="@dimen/margin_16"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/image_user"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:src="@drawable/ic_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <EditText
         android:id="@+id/enter_text"
         android:layout_width="match_parent"
@@ -28,6 +40,5 @@
         android:text="@string/enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_text"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/enter_text" />
 </androidx.constraintlayout.widget.ConstraintLayout>
