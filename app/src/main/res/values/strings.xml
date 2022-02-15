@@ -7,4 +7,5 @@
     <string name="download">загрузить</string>
     <string name="image_inquiry">image/*</string>
     <string name="send">отправить</string>
+    <string name="recycler">recycler</string>
 </resources>

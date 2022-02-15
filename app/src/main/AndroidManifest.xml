@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Month_6_lesson_1">
         <activity
+            android:name=".RecyclerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,9 +23,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>

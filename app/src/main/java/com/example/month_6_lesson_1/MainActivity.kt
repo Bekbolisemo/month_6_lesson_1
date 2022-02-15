@@ -44,10 +44,11 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("CommitPrefEdits")
     private fun send() {
+
         preferences = getSharedPreferences(KEY_APP_PREFERENCES,Context.MODE_PRIVATE)
 
         binding.enterText.setText(preferences.getString(KEY_SAVE_TEXT,""))
-        Glide.with(binding.imageUser).load(preferences.getString(KEY_SAVE_IMAGE,null)).circleCrop().into(binding.imageUser)
+        Glide.with(binding.imageUser).load(preferences.getString(KEY_SAVE_IMAGE,R.drawable.ic_user.toString())).circleCrop().into(binding.imageUser)
 
         val getContent =
             registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri ->
@@ -56,6 +57,12 @@ class MainActivity : AppCompatActivity() {
                 Glide.with(binding.imageUser).load(uri).circleCrop().into(binding.imageUser)
 
             }
+        binding.btnRecycler.setOnClickListener{
+            val intent = Intent(this,RecyclerActivity::class.java).apply {
+                putExtra(KEY_MAIN_ACTIVITY_PUSH,binding.enterText.text.toString())
+            }
+            startActivity(intent)
+        }
         binding.imageUser.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setNegativeButton(getString(R.string.download)) { _, _ ->
@@ -117,5 +124,6 @@ class MainActivity : AppCompatActivity() {
             binding.enterText.setText(result.data?.getStringExtra(KEY_MAIN_ACTIVITY_PUSH))
         }
     }
+
 
 }
